@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import user from "../../Media/himel-hasan.png";
 import { getFromLs, setToLs } from "../../Utilities/SaveToLocalStorage";
+import Swal from "sweetalert2";
+import "./SideBar.css";
 
 const SideBar = ({ time }) => {
   const [pause, setPause] = useState(0);
@@ -24,7 +26,7 @@ const SideBar = ({ time }) => {
           </div>
         </div>
         <div className="px-5 text-left normal-case">
-          <h2 className="text-lg font-semibold">Himel Hasan</h2>
+          <h2 className="text-2xl font-semibold">Himel Hasan</h2>
           <div className="flex ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +66,7 @@ const SideBar = ({ time }) => {
         </div>
       </div>
       <h2 className="text-xl font-semibold text-left my-5 p-0">Add A Break</h2>
-      <div class="flex flex-row bg-gray-100 py-5 mt-5 px-2 rounded-xl justify-center">
+      <div class="grid grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-5 bg-gray-100 py-5 mt-5 px-10 rounded-xl justify-items-center">
         <button
           onClick={(e) => breakTime(e.target.innerText)}
           className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase"
@@ -117,7 +119,16 @@ const SideBar = ({ time }) => {
           <p className="bg-gray-100 px-2 py-3">{pause} Minutes</p>
         </div>
 
-        <button className="btn btn-block bg-lime-400 text-black border-none hover:text-white normal-case">
+        <button
+          className="btn btn-block bg-lime-400 text-black border-none hover:text-white normal-case"
+          onClick={() => {
+            Swal.fire(
+              "Good job!",
+              `You have completed all the activities!,<br className="py-3 text-red-600"> You total exercise time is               ${time} Minutes  <br> You took ${pause} Minutes Breaks`,
+              "success"
+            );
+          }}
+        >
           Activity Completed
         </button>
       </div>

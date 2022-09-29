@@ -12,15 +12,11 @@ const SingleActivity = ({ singleActivity, time, setTime }) => {
       <img alt="Home" src={image} class="object-cover w-full h-56 rounded-md" />
 
       <div class="mt-2">
-        <dl>
+        <dl className="text-left">
           <div>
-            <dt class="sr-only">Address</dt>
-
-            <dd class="font-medium">{activity}</dd>
+            <dd class="text-2xl py-2 font-normal">{activity}</dd>
           </div>
           <div>
-            <dt class="sr-only">Price</dt>
-
             <dd class="text-sm text-gray-500">{description}</dd>
           </div>
         </dl>

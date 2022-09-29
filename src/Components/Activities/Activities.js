@@ -1,4 +1,5 @@
 import React from "react";
+import Questions from "../Questions/Questions";
 import SingleActivity from "../SingleActivity/SingleActivity";
 
 const Activities = ({ activities, time, setTime }) => {
@@ -14,6 +15,7 @@ const Activities = ({ activities, time, setTime }) => {
           ></SingleActivity>
         ))}
       </div>
+      <Questions></Questions>
     </div>
   );
 };
