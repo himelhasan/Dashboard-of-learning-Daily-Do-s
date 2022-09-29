@@ -1,9 +1,10 @@
 import React from "react";
+import logo from "../../logo.png";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-lime-400">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -39,7 +40,9 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a className="btn btn-ghost normal-case text-xl z-20">
+            <img src={logo} alt="" className="w-1/6" />
+          </a>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle">
@@ -74,7 +77,6 @@ const Navbar = () => {
                   d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                 />
               </svg>
-              <span className="badge badge-xs badge-primary indicator-item"></span>
             </div>
           </button>
         </div>
