@@ -3,7 +3,7 @@ import user from "../../Media/himel-hasan.png";
 
 const SideBar = () => {
   return (
-    <div className="px-5">
+    <div className="px-5 pt-5 md:pt-20">
       <div className="card card-side bg-base-100 flex">
         <div className="avatar">
           <div className="w-12 h-12 rounded-full">
@@ -36,22 +36,22 @@ const SideBar = () => {
           </div>
         </div>
       </div>
-      <div class="flex flex-row bg-base-200 py-5 my-10 px-2 rounded-xl">
+      <div class="flex flex-row bg-gray-100 py-5 my-10 px-2 rounded-xl">
         <div class="basis-1/3">
-          <p className="font-bold leading-none	text-lg m-0">75kg</p>
+          <p className="font-semibold leading-none	text-lg m-0">75kg</p>
           <p className="	m-0">Weight</p>
         </div>
         <div class="basis-1/3">
-          <p className="font-bold leading-none	text-lg m-0">5.9</p>
+          <p className="font-semibold leading-none	text-lg m-0">5.9</p>
           <p className="	m-0">Height</p>
         </div>
         <div class="basis-1/3">
-          <p className="font-bold leading-none	text-lg m-0">27</p>
+          <p className="font-semibold leading-none	text-lg m-0">27</p>
           <p className="	m-0">Years</p>
         </div>
       </div>
-      <h2 className="text-xl font-semibold text-left m-0 p-0">Add A Break</h2>
-      <div class="flex flex-row bg-base-200 py-5 mt-5 px-2 rounded-xl justify-center lowercase  ">
+      <h2 className="text-xl font-semibold text-left my-5 p-0">Add A Break</h2>
+      <div class="flex flex-row bg-gray-100 py-5 mt-5 px-2 rounded-xl justify-center lowercase  ">
         <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white">
           <p>10s</p>
         </button>
@@ -66,6 +66,33 @@ const SideBar = () => {
         </button>
         <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white">
           <p>50s</p>
+        </button>
+      </div>
+      <h2 className="text-xl font-semibold text-left my-5 p-0">Exercise Details</h2>
+      <div>
+        <div className="form-control my-3">
+          <label className="input-group ">
+            <span className="bg-gray-100">Exercise time</span>
+            <input
+              type="text"
+              placeholder="200 seconds"
+              className="input bg-gray-100  focus:outline-none"
+            />
+          </label>
+        </div>
+
+        <div className="form-control my-3">
+          <label className="input-group ">
+            <span className="bg-gray-100 w-full">Break time </span>
+            <input
+              type="text"
+              placeholder="200 seconds"
+              className="input bg-gray-100  focus:outline-none"
+            />
+          </label>
+        </div>
+        <button className="btn btn-block bg-lime-400 text-black border-none hover:text-white">
+          Wide
         </button>
       </div>
     </div>
