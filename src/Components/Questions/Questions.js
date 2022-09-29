@@ -43,7 +43,7 @@ const Questions = () => {
           className="w-1/2 my-3 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
         >
           <div className="collapse-title text-xl font-medium">
-            What are the Usage of UseState Without Data Loading?
+            What are the Usage of UseEffect Without Data Loading?
           </div>
           <div className="collapse-content">
             <p>

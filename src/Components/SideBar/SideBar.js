@@ -124,7 +124,7 @@ const SideBar = ({ time }) => {
           onClick={() => {
             Swal.fire(
               "Good job!",
-              `You have completed all the activities!,<br className="py-3 text-red-600"> You total exercise time is               ${time} Minutes  <br> You took ${pause} Minutes Breaks`,
+              `You have completed all the activities!,<br className="py-3 text-red-600"> You total exercise time is ${time} Minutes  <br> You took ${pause} Minutes Breaks`,
               "success"
             );
           }}
