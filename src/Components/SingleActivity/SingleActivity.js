@@ -1,10 +1,14 @@
 import React from "react";
 
-const SingleActivity = ({ singleActivity }) => {
-  const { activity, addedInList, description, duration, id, image } = singleActivity;
+const SingleActivity = ({ singleActivity, time, setTime }) => {
+  const { activity, addedInList, description, duration, image } = singleActivity;
+
+  const totalDuration = (duration) => {
+    setTime(time + duration);
+  };
 
   return (
-    <div className="block p-4 rounded-lg shadow-xl hover:shadow-2xl hover:shadow-indigo-300 shadow-indigo-100">
+    <div className="block p-4 rounded-lg shadow-xl hover:shadow-2xl hover:shadow-indigo-300 shadow-indigo-100 flex flex-col justify-around">
       <img alt="Home" src={image} class="object-cover w-full h-56 rounded-md" />
 
       <div class="mt-2">
@@ -21,8 +25,8 @@ const SingleActivity = ({ singleActivity }) => {
           </div>
         </dl>
 
-        <dl class="flex items-center gap-8 mt-6 text-xs">
-          <div class="sm:inline-flex sm:items-center sm:shrink-0">
+        <dl class=" flex items-center gap-8 mt-6 text-xs sm:block">
+          <div class="w-1/3 sm:inline-flex sm:items-center sm:shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -45,7 +49,7 @@ const SingleActivity = ({ singleActivity }) => {
             </div>
           </div>
 
-          <div class="sm:inline-flex sm:items-center sm:shrink-0">
+          <div class="w-1/3 sm:inline-flex sm:items-center sm:shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -68,7 +72,7 @@ const SingleActivity = ({ singleActivity }) => {
             </div>
           </div>
 
-          <div class="sm:inline-flex sm:items-center sm:shrink-0">
+          <div class="w-1/3 text-center sm:inline-flex sm:items-center sm:shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -92,6 +96,12 @@ const SingleActivity = ({ singleActivity }) => {
           </div>
         </dl>
       </div>
+      <button
+        onClick={() => totalDuration(duration)}
+        className="btn btn-block bg-lime-400 text-black border-none hover:text-white normal-case mt-5"
+      >
+        Activity Completed
+      </button>
     </div>
   );
 };

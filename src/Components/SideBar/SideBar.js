@@ -1,7 +1,7 @@
 import React from "react";
 import user from "../../Media/himel-hasan.png";
 
-const SideBar = () => {
+const SideBar = ({ time }) => {
   return (
     <div className="px-5 pt-5 md:pt-20">
       <div className="card card-side bg-base-100 flex">
@@ -51,48 +51,36 @@ const SideBar = () => {
         </div>
       </div>
       <h2 className="text-xl font-semibold text-left my-5 p-0">Add A Break</h2>
-      <div class="flex flex-row bg-gray-100 py-5 mt-5 px-2 rounded-xl justify-center lowercase  ">
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white">
-          <p>10s</p>
+      <div class="flex flex-row bg-gray-100 py-5 mt-5 px-2 rounded-xl justify-center">
+        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
+          <p>10m</p>
         </button>
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white">
-          <p>20s</p>
+        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
+          <p>20m</p>
         </button>
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white">
-          <p>30s</p>
+        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
+          <p>30m</p>
         </button>
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white">
-          <p>40s</p>
+        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
+          <p>40m</p>
         </button>
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white">
-          <p>50s</p>
+        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
+          <p>50m</p>
         </button>
       </div>
       <h2 className="text-xl font-semibold text-left my-5 p-0">Exercise Details</h2>
       <div>
-        <div className="form-control my-3">
-          <label className="input-group ">
-            <span className="bg-gray-100">Exercise time</span>
-            <input
-              type="text"
-              placeholder="200 seconds"
-              className="input bg-gray-100  focus:outline-none"
-            />
-          </label>
+        <div className="flex my-3 bg-gray-100 w-full rounded-lg justify-center">
+          <p className="bg-gray-100 px-2 py-3">Exercise time</p>
+          <p className="bg-gray-100 px-2 py-3">{time} Minutes</p>
+        </div>
+        <div className="flex my-3 bg-gray-100 w-full rounded-lg justify-center">
+          <p className="bg-gray-100 px-2 py-3">Break time</p>
+          <p className="bg-gray-100 px-2 py-3">{time} Minutes</p>
         </div>
 
-        <div className="form-control my-3">
-          <label className="input-group ">
-            <span className="bg-gray-100 w-full">Break time </span>
-            <input
-              type="text"
-              placeholder="200 seconds"
-              className="input bg-gray-100  focus:outline-none"
-            />
-          </label>
-        </div>
-        <button className="btn btn-block bg-lime-400 text-black border-none hover:text-white">
-          Wide
+        <button className="btn btn-block bg-lime-400 text-black border-none hover:text-white normal-case">
+          Activity Completed
         </button>
       </div>
     </div>
