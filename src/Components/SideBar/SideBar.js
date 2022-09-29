@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import user from "../../Media/himel-hasan.png";
+import { getFromLs, setToLs } from "../../Utilities/SaveToLocalStorage";
 
 const SideBar = ({ time }) => {
+  const [pause, setPause] = useState(0);
+
+  useEffect(() => {
+    const prev = getFromLs();
+    setPause(prev);
+  }, []);
+
+  const breakTime = (e) => {
+    setPause(e.slice(0, 2));
+    setToLs(e.slice(0, 2));
+  };
+
   return (
     <div className="px-5 pt-5 md:pt-20">
       <div className="card card-side bg-base-100 flex">
@@ -52,20 +65,45 @@ const SideBar = ({ time }) => {
       </div>
       <h2 className="text-xl font-semibold text-left my-5 p-0">Add A Break</h2>
       <div class="flex flex-row bg-gray-100 py-5 mt-5 px-2 rounded-xl justify-center">
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
-          <p>10m</p>
+        <button
+          onClick={(e) => breakTime(e.target.innerText)}
+          className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase"
+        >
+          <p className="">
+            <span>10</span>m
+          </p>
         </button>
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
-          <p>20m</p>
+        <button
+          onClick={(e) => breakTime(e.target.innerText)}
+          className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase"
+        >
+          <p className="">
+            <span>20</span>m
+          </p>
         </button>
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
-          <p>30m</p>
+        <button
+          onClick={(e) => breakTime(e.target.innerText)}
+          className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase"
+        >
+          <p className="">
+            <span>30</span>m
+          </p>
         </button>
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
-          <p>40m</p>
+        <button
+          onClick={(e) => breakTime(e.target.innerText)}
+          className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase"
+        >
+          <p className="">
+            <span>40</span>m
+          </p>
         </button>
-        <button className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase ">
-          <p>50m</p>
+        <button
+          onClick={(e) => breakTime(e.target.innerText)}
+          className="btn btn-circle mx-1 bg-lime-400 border-none text-black hover:text-white lowercase"
+        >
+          <p className="">
+            <span>50</span>m
+          </p>
         </button>
       </div>
       <h2 className="text-xl font-semibold text-left my-5 p-0">Exercise Details</h2>
@@ -76,7 +114,7 @@ const SideBar = ({ time }) => {
         </div>
         <div className="flex my-3 bg-gray-100 w-full rounded-lg justify-center">
           <p className="bg-gray-100 px-2 py-3">Break time</p>
-          <p className="bg-gray-100 px-2 py-3">{time} Minutes</p>
+          <p className="bg-gray-100 px-2 py-3">{pause} Minutes</p>
         </div>
 
         <button className="btn btn-block bg-lime-400 text-black border-none hover:text-white normal-case">

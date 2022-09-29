@@ -6,8 +6,6 @@ const Home = () => {
   const [activities, setActivities] = useState([]);
   const [time, setTime] = useState(0);
 
-  console.log(time);
-
   // load data from api / json
   useEffect(() => {
     fetch("activities-data.json")
