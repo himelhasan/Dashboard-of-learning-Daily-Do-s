@@ -3,10 +3,10 @@ import React from "react";
 const Questions = () => {
   return (
     <div>
-      <div className="py-20 flex flex-col items-center text-left">
+      <div className="py- md:py-20 flex flex-col items-center text-left">
         <div
           tabIndex={0}
-          className="w-1/2 my-3 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+          className="w-full md:w-1/2 my-3 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
         >
           <div className="collapse-title text-xl font-medium">How Does React Work?</div>
           <div className="collapse-content">
@@ -23,7 +23,7 @@ const Questions = () => {
         </div>
         <div
           tabIndex={0}
-          className="w-1/2 my-3 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+          className="w-full md:w-1/2 my-3 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
         >
           <div className="collapse-title text-xl font-medium">
             What is the Difference Between Props And State?
@@ -40,7 +40,7 @@ const Questions = () => {
         </div>
         <div
           tabIndex={0}
-          className="w-1/2 my-3 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+          className="w-full md:w-1/2 my-3 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
         >
           <div className="collapse-title text-xl font-medium">
             What are the Usage of UseEffect Without Data Loading?
