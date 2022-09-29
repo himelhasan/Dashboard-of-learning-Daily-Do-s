@@ -100,7 +100,7 @@ const SingleActivity = ({ singleActivity, time, setTime }) => {
         onClick={() => totalDuration(duration)}
         className="btn btn-block bg-lime-400 text-black border-none hover:text-white normal-case mt-5"
       >
-        Activity Completed
+        Add to list
       </button>
     </div>
   );

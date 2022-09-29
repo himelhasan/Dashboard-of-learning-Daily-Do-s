@@ -4,8 +4,8 @@ import logo from "../../logo.png";
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-lime-400">
-        <div className="navbar-start">
+      <div className="navbar bg-lime-400 justify-evenly">
+        <div className="navbar-start w-1/3">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
@@ -39,12 +39,10 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl z-20">
-            <img src={logo} alt="" className="w-1/6" />
-          </a>
+        <div className="navbar-center w-1/3 flex justify-center p-0 m-0">
+          <img className="w-1/2 md:w-1/6" src={logo} alt="" />
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end w-1/3">
           <button className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"

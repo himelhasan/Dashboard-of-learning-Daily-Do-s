@@ -17,7 +17,7 @@ const SideBar = ({ time }) => {
 
   return (
     <div className="px-5 pt-5 md:pt-20">
-      <div className="card card-side bg-base-100 flex">
+      <div className="card card-side bg-base-100 flex justify-center sm:justify-start">
         <div className="avatar">
           <div className="w-12 h-12 rounded-full">
             <img src={user} alt="himel hasan" />
@@ -51,7 +51,7 @@ const SideBar = ({ time }) => {
       </div>
       <div class="flex flex-row bg-gray-100 py-5 my-10 px-2 rounded-xl">
         <div class="basis-1/3">
-          <p className="font-semibold leading-none	text-lg m-0">75kg</p>
+          <p className="font-semibold leading-none	text-lg m-0">85kg</p>
           <p className="	m-0">Weight</p>
         </div>
         <div class="basis-1/3">
